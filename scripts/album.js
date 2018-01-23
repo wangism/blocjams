@@ -78,15 +78,25 @@ var albumPicasso = {
  };
 
  var findParentByClassName = function(element, targetClass) {
-   
-    if (element) {
+
+   if (element) {
         var currentParent = element.parentElement;
+
+       // Checks if parent exists prior to while loop
+       if(!currentParent){
+         console.log("No parent found");
+       }
         while (currentParent.className !== targetClass && currentParent.className !== null) {
             currentParent = currentParent.parentElement;
+
+           // currentParent will be null if we have no more parents to check
+           if(currentParent === null){
+             console.log("No parent found with that class name");
+           }
         }
         return currentParent;
     }
-};
+
 
 var getSongItem = function(element) {
    switch (element.className) {
