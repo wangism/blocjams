@@ -170,11 +170,11 @@ var offHover = function(event) {
  };
 
  var togglePlayFromPlayerBar = function() {
-   if // song is paused THEN:
+   // IF song is paused THEN:
    /* songNumberCell from Play --> Pause
    /* player bar html = Play --> Pause
    /* Play song */
-   if // song is playing AND pause is clicked
+   // IF song is playing AND pause is clicked
    /* songNumberCell from Pause --> Play
    /* player bar html =  Pause --> Play
    /* Pause song */
