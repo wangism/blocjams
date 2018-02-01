@@ -139,10 +139,6 @@ var offHover = function(event) {
    $lastSongNumberCell.html(lastSongNumber);
  };
 
- var trackIndex = function(album, song) {
-   return album.songs.indexOf(song);
- }
-
  var previousSong = function() {
    var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
    currentSongIndex--;
@@ -193,6 +189,7 @@ var currentAlbum = null;
 var currentlyPlayingSongNumber = null;
 var currentSongFromAlbum = null;
 var currentSoundFile = null;
+var currentVolume = 80;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
