@@ -139,10 +139,6 @@ var offHover = function(event) {
    $lastSongNumberCell.html(lastSongNumber);
  };
 
- var trackIndex = function(album, song) {
-   return album.songs.indexOf(song);
- }
-
  var previousSong = function() {
    var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
    currentSongIndex--;
@@ -173,6 +169,17 @@ var offHover = function(event) {
    $lastSongNumberCell.html(lastSongNumber);
  };
 
+ var togglePlayFromPlayerBar = function() {
+   if // song is paused THEN:
+   /* songNumberCell from Play --> Pause
+   /* player bar html = Play --> Pause
+   /* Play song */
+   if // song is playing AND pause is clicked
+   /* songNumberCell from Pause --> Play
+   /* player bar html =  Pause --> Play
+   /* Pause song */
+ };
+
  var trackIndex = function(album, song) {
    return album.songs.indexOf(song);
  }
@@ -196,11 +203,13 @@ var currentSoundFile = null;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
+var $playPauseButton = $('.main-controls .play-pause');
 
  $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
+    $playPauseButton.click(togglePlayFromPlayerBar);
  });
 
      var albums = [albumPicasso, albumMarconi];
